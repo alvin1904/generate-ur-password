@@ -1,15 +1,16 @@
 <script>
 	export let level;
-	console.log(level);
+	const colors = ['red', 'orange', 'yellow', 'var(--theme-color)'];
+	const status = ['VERY WEAK', 'WEAK', 'DECENT', 'GOOD'];
 </script>
 
-<div class="inside_box">
-	<h5>STRONG</h5>
+<div class="inside_box" style={`--clr: ${colors[level - 1]}`}>
+	<h5>PASSWORD DIFFICULTY: {status[level - 1]}</h5>
 	<div class="level_bar">
-		<span class="level" />
-		<span class="level" />
-		<span class="level" />
-		<span class="level" />
+		<span class={`level ${level >= 1 ? 'colorIt' : ''}`} />
+		<span class={`level ${level >= 2 ? 'colorIt' : ''}`} />
+		<span class={`level ${level >= 3 ? 'colorIt' : ''}`} />
+		<span class={`level ${level >= 4 ? 'colorIt' : ''}`} />
 	</div>
 </div>
 
@@ -20,6 +21,9 @@
 		gap: 0.5rem;
 		align-items: center;
 		justify-content: space-between;
+	}
+	.inside_box h5 {
+		font-size: 1.1rem;
 	}
 	.level_bar {
 		display: grid;
@@ -33,5 +37,8 @@
 		width: 25px;
 		border-radius: 5px;
 		border: 2px solid var(--theme-color);
+	}
+	.colorIt {
+		background-color: var(--clr);
 	}
 </style>

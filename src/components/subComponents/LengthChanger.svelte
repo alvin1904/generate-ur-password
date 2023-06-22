@@ -13,7 +13,7 @@
 		type="range"
 		id="length"
 		value="8"
-		min="0"
+		min="8"
 		max="25"
 		on:input={handleLengthChange}
 	/>

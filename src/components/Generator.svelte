@@ -7,15 +7,30 @@
 
 	let options = [
 		{ id: 'upper', label: 'Include UPPERCASE Letters', checked: false },
-		{ id: 'lower', label: 'Include lowercase Letters', checked: false },
+		{ id: 'lower', label: 'Include lowercase Letters', checked: true },
 		{ id: 'number', label: 'Include Numbers', checked: false },
 		{ id: 'symbol', label: 'Include Symbols', checked: false }
 	];
-	let password = 'some password';
+	let password = 'passwordilla';
 	let length = 8;
 	let level = 1;
+	const getScore = () => {
+		let score = 0;
+		let res = options.map((option) => {
+			return option.checked ? option.id : false;
+		});
+		score += res.includes('upper') ? 10 : 0;
+		score += res.includes('lower') ? 10 : 0;
+		score += res.includes('number') ? 10 : 0;
+		score += res.includes('symbol') ? 10 : 0;
+		if (length > 20) score += 40;
+		else if (length > 15) score += 20;
+		else if (length > 8) score += 10;
+		return score > 10 ? (score <= 40 ? score : 40) : 10;
+	};
 	const handleLengthChange = (e) => {
 		length = e.target.value;
+		level = getScore() / 10;
 	};
 	function handleChecked(option) {
 		options = options.map((opt) => {
@@ -24,6 +39,7 @@
 			}
 			return opt;
 		});
+		level = getScore() / 10;
 	}
 	function handleGenerate() {
 		console.log('generate');
