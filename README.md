@@ -1,38 +1,52 @@
-# create-svelte
+Made with...<img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Svelte.svg" height="20" width="20" alt="Svelte"/>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Password Generator
 
-## Creating a project
+<div>
+<img src="./static/pic1.png" alt="ss" />
+<img src="./static/pic2.png" alt="ss" />
+</div>
 
-If you're seeing this, you've probably already done this step. Congrats!
+This is a simple password generator application built with Svelte. It allows users to generate secure passwords with customizable criteria such as length, including uppercase letters, lowercase letters, numbers, and special characters.
 
+## TABLE OF CONTENTS
+
+- [Important Links](#important-links)
+- [Configuration for Local Deployment](#configuration-for-local-deployment)
+- [Tech Stack](#tech-stack)
+- [Usage and Features](#usage-and-features)
+
+## Important Links
+
+- Visit live website @ https://alvins-password-generator.netlify.app/
+- Visit Client repo @ https://github.com/alvin1904/password-generator-svelte
+
+## Configuration for Local Deployment
+Clone the repository
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/alvin1904/password-generator-svelte
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project folder, install dependencies with `npm install` (or `pnpm install` or `yarn`)
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+npm install
+```
+To start the development server and open the app in a new browser tab
+```bash
 npm run dev -- --open
 ```
 
-## Building
+## Tech Stack
 
-To create a production version of your app:
+- `Svelte`: A lightweight and efficient frontend framework for building reactive web applications with a smooth developer experience.
 
-```bash
-npm run build
-```
+- `Svelte Kit Icons`: A comprehensive collection of icons for Svelte Kit, providing an extensive range of high-quality visuals to enhance your Svelte Kit projects.
 
-You can preview the production build with `npm run preview`.
+## Usage and Features
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Once the system is installed and running, users can follow these guidelines to utilize its features:
+
+- Generate random passwords with specified length.
+- Customize password criteria to include uppercase letters, lowercase letters, numbers, and special characters.
+- Copy generated passwords to the clipboard with a single click.
+- Easy-to-use and intuitive user interface.
