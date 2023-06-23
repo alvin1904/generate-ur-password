@@ -4,6 +4,7 @@
 	import DifficultyOptions from './subComponents/DifficultyOptions.svelte';
 	import DifficultyLevel from './subComponents/DifficultyLevel.svelte';
 	import GenerateButton from './subComponents/GenerateButton.svelte';
+	import Algorithm from '../utils/GeneratorAlgo';
 
 	let options = [
 		{ id: 'upper', label: 'Include UPPERCASE Letters', checked: false },
@@ -42,7 +43,11 @@
 		level = getScore() / 10;
 	}
 	function handleGenerate() {
-		console.log('generate');
+		const upperCase = options[0].checked;
+		const lowercase = options[1].checked;
+		const numbers = options[2].checked;
+		const symbols = options[3].checked;
+		password = Algorithm(length, upperCase, lowercase, numbers, symbols);
 	}
 </script>
 
