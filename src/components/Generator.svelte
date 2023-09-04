@@ -12,7 +12,7 @@
 		{ id: 'number', label: 'Include Numbers', checked: false },
 		{ id: 'symbol', label: 'Include Symbols', checked: false }
 	];
-	let password = 'passwordilla';
+	let password = ' ';
 	let length = 8;
 	let level = 1;
 	const getScore = () => {
