@@ -1,5 +1,5 @@
 {
-	"name": "password-generator-svelte",
+	"name": "generate-ur-password",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
